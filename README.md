@@ -23,6 +23,7 @@ These are the repos you can open without asking. GitLab still holds the private 
 | [Meshlight](https://github.com/iM4x3ll/meshlight) | Interactive mesh map of my homelab fabric — edge, DNS, inference, media, and game servers as one glowing network. | [meshlight.vercel.app](https://meshlight.vercel.app) |
 | [Homelab Pulse](https://github.com/iM4x3ll/homelab-pulse) | Public status board for the AI stack, DNS, media, and game servers at home. | [homelab-pulse.vercel.app](https://homelab-pulse.vercel.app) |
 | [maxwellnixon.com](https://www.maxwellnixon.com) | Portfolio, 35+ browser tools, live data, and an arcade. | [site](https://www.maxwellnixon.com) |
+| [CU7000 / Tizen notes](https://github.com/iM4x3ll/cu7000-tizen-notes) | Field notes from a working Samsung CU7000 living-room setup. | [repo](https://github.com/iM4x3ll/cu7000-tizen-notes) |
 
 <p align="center"><img src="assets/stats.svg" alt="By the numbers: three engines in one process, a 90 KB launcher, one-command OS builds, 35+ tools, two live public demos" width="100%"></p>
 
