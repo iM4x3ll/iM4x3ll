@@ -41,23 +41,6 @@ Most of the source below is private on [GitLab](https://gitlab.com/Maxwell333). 
 | [Paradise](https://gitlab.com/Maxwell333/paradise-radio) | Unofficial Radio Paradise player with lossless playback and a neural DJ voice. | Python, PyQt6, libVLC |
 | [maxwellnixon.com](https://www.maxwellnixon.com) | Public portfolio, browser tools, live data and an arcade. | Next.js, TypeScript |
 
-<p align="center">
-  <a href="https://gitlab.com/Maxwell333/xport"><img src="assets/card-xport.png" alt="XPort: experimental portal rendering between GTA worlds; seamless traversal in development" width="49%"></a>
-  <a href="https://gitlab.com/Maxwell333/maxwellos"><img src="assets/card-maxwellos.png" alt="MaxwellOS: an Arch-based gaming Linux distro" width="49%"></a>
-</p>
-<p align="center">
-  <a href="https://gitlab.com/Maxwell333/max-launcher"><img src="assets/card-launcher.png" alt="MAX Launcher: actual application screenshot showing game artwork, search and collections" width="49%"></a>
-  <a href="https://ouija.one"><img src="assets/card-ouija.png" alt="Ouija: real-time community chat on the BEAM" width="49%"></a>
-</p>
-<p align="center">
-  <a href="https://gitlab.com/Maxwell333/riftfall"><img src="assets/card-riftfall.png" alt="Riftfall: a co-op Roblox game" width="49%"></a>
-  <a href="https://gitlab.com/Maxwell333/powder-lab"><img src="assets/card-powder.png" alt="Powder Lab: a falling-sand chemistry sandbox" width="49%"></a>
-</p>
-<p align="center">
-  <a href="https://gitlab.com/Maxwell333/paradise-radio"><img src="assets/card-paradise.png" alt="Paradise: a radio player with lossless audio and a neural DJ" width="49%"></a>
-  <a href="https://www.maxwellnixon.com"><img src="assets/card-site.png" alt="maxwellnixon.com: portfolio with 35+ tools, live data and an arcade" width="49%"></a>
-</p>
-
 ## Also in the garage
 
 - **JARVIS**, a Python voice assistant with a locally generated voice.
