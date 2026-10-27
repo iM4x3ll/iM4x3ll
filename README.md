@@ -2,7 +2,7 @@
   <a href="https://www.maxwellnixon.com"><img src="assets/header.svg" alt="Maxwell Nixon: systems, operating systems, games, web, local AI" width="100%"></a>
 </p>
 
-I'm Maxwell. By day I'm a technician at a managed IT provider in New Jersey, keeping law firms and courtrooms running, and I run IT for my family's tree service business on the side.
+I'm Maxwell. By day I'm a technician at [PCS](https://helpmepcs.com) in New Jersey, keeping law firms and courtrooms running, and I run IT for my family's tree service business on the side.
 
 The rest of the time I build things, mostly to find out whether they can be built: game-engine experiments in C++, small Windows apps in C#, an Arch-based gaming distro, web platforms, and local AI. I like projects that cross boundaries, from rendering one GTA world inside another to making a useful desktop tool fit in a single small executable.
 
@@ -53,6 +53,6 @@ Most of the source below is private on [GitLab](https://gitlab.com/Maxwell333). 
 
 ## Find me
 
-[maxwellnixon.com](https://www.maxwellnixon.com) · [GitLab](https://gitlab.com/Maxwell333) · [LinkedIn](https://linkedin.com/in/maxwell-nixon-90351627a) · [mnixon112@outlook.com](mailto:mnixon112@outlook.com)
+[maxwellnixon.com](https://www.maxwellnixon.com) · [PCS](https://helpmepcs.com) · [GitLab](https://gitlab.com/Maxwell333) · [LinkedIn](https://linkedin.com/in/maxwell-nixon-90351627a) · [mnixon112@outlook.com](mailto:mnixon112@outlook.com)
 
 Graphics are generated from `profile.config.mjs` — `node scripts/build.mjs --profile-only`.
