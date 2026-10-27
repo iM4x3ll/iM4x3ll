@@ -8,37 +8,47 @@ The rest of the time I build things, mostly to find out whether they can be buil
 
 **Start here:** [Explore my portfolio](https://www.maxwellnixon.com) · [Browse my projects](https://www.maxwellnixon.com/projects) · [Try the browser tools](https://www.maxwellnixon.com/tools) · [GitLab](https://gitlab.com/Maxwell333)
 
+**Public GTA / engine work:** [XPort](https://gitlab.com/Maxwell333/xport) · [SmartCarSystem](https://gitlab.com/Maxwell333/smartcar-system) · [Game Secrets](https://gitlab.com/Maxwell333/game-secrets) · [L.A. Noire LOD](https://gitlab.com/Maxwell333/lanoire-lod) · [CarCheck](https://gitlab.com/Maxwell333/gtav-car-check)
+
+**Playable, source private:** [Dead Signal](https://www.maxwellnixon.com/play/dead-signal) and [Slipstream](https://www.maxwellnixon.com/play/slipstream) on the site.
+
 <p align="center"><img src="assets/domains.svg" alt="What I do: infrastructure and IT, systems programming, operating systems, desktop software, web platforms, local AI, game dev and modding, home lab" width="100%"></p>
 
 <p align="center"><img src="assets/terminal.svg" alt="whoami: roles, stacks and tools across infrastructure, systems, apps, web, Linux, AI and home lab" width="100%"></p>
 
 <p align="center"><img src="assets/divider.svg" alt="" width="100%"></p>
 
-## Live & public
-
-These are the repos you can open without asking. GitLab still holds the private source.
+## Live on GitHub
 
 | Project | What it does | Live |
 | --- | --- | --- |
-| [Meshlight](https://github.com/iM4x3ll/meshlight) | Interactive mesh map of my homelab fabric — edge, DNS, inference, media, and game servers as one glowing network. | [meshlight.vercel.app](https://meshlight.vercel.app) |
-| [Homelab Pulse](https://github.com/iM4x3ll/homelab-pulse) | Public status board for the AI stack, DNS, media, and game servers at home. | [homelab-pulse.vercel.app](https://homelab-pulse.vercel.app) |
-| [maxwellnixon.com](https://www.maxwellnixon.com) | Portfolio, 35+ browser tools, live data, and an arcade. | [site](https://www.maxwellnixon.com) |
+| [Meshlight](https://github.com/iM4x3ll/meshlight) | Interactive mesh map of my homelab fabric. | [meshlight.vercel.app](https://meshlight.vercel.app) |
+| [Homelab Pulse](https://github.com/iM4x3ll/homelab-pulse) | Status board for the AI stack, DNS, media, and game servers at home. | [homelab-pulse.vercel.app](https://homelab-pulse.vercel.app) |
 | [CU7000 / Tizen notes](https://github.com/iM4x3ll/cu7000-tizen-notes) | Field notes from a working Samsung CU7000 living-room setup. | [repo](https://github.com/iM4x3ll/cu7000-tizen-notes) |
+| [maxwellnixon.com](https://www.maxwellnixon.com) | Portfolio, 35+ browser tools, live data, and an arcade. | [site](https://www.maxwellnixon.com) |
 
 <p align="center"><img src="assets/stats.svg" alt="By the numbers: three engines in one process, a 90 KB launcher, one-command OS builds, 35+ tools, two live public demos" width="100%"></p>
 
 ## What I build
 
-Most of the source below is private on [GitLab](https://gitlab.com/Maxwell333). The [portfolio](https://www.maxwellnixon.com) is the public starting point.
+Source for the table lives on [GitLab](https://gitlab.com/Maxwell333). GTA and engine work is the best place to start.
 
 | Project | What it does | Built with |
 | --- | --- | --- |
 | [XPort](https://gitlab.com/Maxwell333/xport) | Renders live GTA guest worlds inside San Andreas. Seamless portal traversal is still in development. | C++, Direct3D 9 |
+| [SmartCarSystem](https://gitlab.com/Maxwell333/smartcar-system) | Tesla-style autopilot, summon and adaptive cruise for GTA 5 Enhanced (Story Mode / SHVDN). | C#, ScriptHookVDotNet |
+| [Game Secrets](https://gitlab.com/Maxwell333/game-secrets) | Searchable easter eggs and hidden encounters in GTA V, RDR2, Witcher 3 and Skyrim. | React |
+| [L.A. Noire LOD](https://gitlab.com/Maxwell333/lanoire-lod) | ASI plugin that logs, scales or overrides named engine properties from an INI file. | C++ |
+| [GTA V CarCheck](https://gitlab.com/Maxwell333/gtav-car-check) | Story Mode helper that parks each spawn and shoots stock plus tuning views. | C#, ScriptHookVDotNet |
+| [Scout](https://gitlab.com/Maxwell333/scout) | Windows eyes-for-AI: screen, logs and local fixes. | C#, WPF |
+| [AI-OS](https://gitlab.com/Maxwell333/ai-os) | Local AI kernel: REPL, MCP, memory and a small knowledge graph. | Python |
+| [game-mod-tool](https://gitlab.com/Maxwell333/game-mod-tool) | Local PowerShell mod manager: install as one unit. | PowerShell |
 | [MaxwellOS](https://gitlab.com/Maxwell333/maxwellos) | Personal Arch-based gaming distro with ISO build scripts and a Windows-to-VM workflow. | Arch Linux, Bash, PowerShell |
 | [MAX Launcher](https://gitlab.com/Maxwell333/max-launcher) | Portable Windows game launcher with automatic discovery, artwork and controller navigation. | C#, WinForms |
-| [Riftfall](https://gitlab.com/Maxwell333/riftfall) | Co-op extraction game: gather orbs, bank upgrades and escape a collapsing island. In private playtesting. | Luau, Roblox |
+| [Riftfall](https://gitlab.com/Maxwell333/riftfall) | Co-op extraction game: gather orbs, bank upgrades and escape a collapsing island. | Luau, Roblox |
 | [Powder Lab](https://gitlab.com/Maxwell333/powder-lab) | Falling-sand sandbox with particle physics, material reactions and a custom software renderer. | C#, WPF |
 | [Paradise](https://gitlab.com/Maxwell333/paradise-radio) | Unofficial Radio Paradise player with lossless playback and a neural DJ voice. | Python, PyQt6, libVLC |
+| [Openjutsu](https://gitlab.com/Maxwell333/openjutsu) | Early open-weights video swap scaffold on Comfy. Planned, not finished. | Python, FastAPI |
 | [maxwellnixon.com](https://www.maxwellnixon.com) | Public portfolio, browser tools, live data and an arcade. | Next.js, TypeScript |
 
 ## Also in the garage
