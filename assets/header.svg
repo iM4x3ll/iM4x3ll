@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 620" width="1280" height="620" role="img"><style>
+  .star { animation: shimmer 8s ease-in-out infinite; }
+  .orbit { transform-box: fill-box; transform-origin: center; animation: orbit 32s linear infinite; }
+  .counter-orbit { animation-direction: reverse; animation-duration: 44s; }
+  .packet { animation: packet 8s linear infinite; }
+  .grid-row { animation: grid 6s linear infinite; }
+  .typed-line { opacity: 0; animation: type-line 30s steps(1,end) infinite; }
+  .typed-window { animation: typing 30s steps(var(--chars),end) infinite; }
+  .first-line { opacity: 1; }
+  .cursor { animation: blink 1.2s steps(1,end) infinite; }
+  .reveal { animation: reveal .7s ease-out both; }
+  .card-trace { animation: trace 14s linear infinite; }
+  @keyframes shimmer { 50% { opacity: .22; } }
+  @keyframes orbit { to { transform: rotate(360deg); } }
+  @keyframes packet { 0% { transform: translateX(0); opacity: 0; } 10%,85% { opacity: .8; } 100% { transform: translateX(360px); opacity: 0; } }
+  @keyframes grid { 0% { transform: translateY(0); opacity: 0; } 20% { opacity: .28; } 80% { opacity: .28; } 100% { transform: translateY(var(--travel)); opacity: 0; } }
+  @keyframes type-line { 0%,19.99% { opacity: 1; } 20%,100% { opacity: 0; } }
+  @keyframes typing { 0% { width: 0; } 8%,17% { width: var(--width); } 19%,100% { width: 0; } }
+  @keyframes blink { 50% { opacity: .15; } }
+  @keyframes reveal { from { opacity: .15; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes trace { to { stroke-dashoffset: -1000; } }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; }
+    .typed-line { opacity: 0; }
+    .first-line { opacity: 1; }
+    .typed-window { width: var(--width); }
+    .grid-row { opacity: .2; }
+    .cursor { opacity: .7; }
+  }
+
+    .name-sheen { transform: translateX(-480px); animation: name-sheen 10s ease-in-out infinite; }
+    @keyframes name-sheen { 0%,12% { transform: translateX(-480px); } 55%,100% { transform: translateX(1500px); } }
+    .portal-spin { transform-box: fill-box; transform-origin: center; animation: portal-spin 28s linear infinite; }
+    .portal-reverse { animation-direction: reverse; animation-duration: 42s; }
+    .portal-flow { animation: portal-flow 12s linear infinite; }
+    .portal-depth { transform-box: fill-box; transform-origin: center; animation: portal-depth 12s linear infinite; }
+    .portal-core { animation: portal-core 9s ease-in-out infinite; }
+    @keyframes portal-spin { to { transform: rotate(360deg); } }
+    @keyframes portal-flow { to { stroke-dashoffset: -240; } }
+    @keyframes portal-depth { 0% { transform: scale(.25); opacity: 0; } 15% { opacity: .2; } 75% { opacity: .35; } 100% { transform: scale(1); opacity: 0; } }
+    @keyframes portal-core { 50% { opacity: .65; } }
+    @media (prefers-reduced-motion: reduce) { .portal-depth { opacity: .18; } }
+  </style>
+    <title>MAXWELL NIXON — systems, worlds and ideas</title>
+    <desc>Three luminous gateways: a circuit, a wireframe world and a constellation. Segmented rims rotate, depth rings travel outward, and energy flows across a reflective grid.</desc>
+    <defs>
+  <linearGradient id="sweep" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1280" y2="0" spreadMethod="repeat">
+    <stop offset="0" stop-color="#22d3ee"/><stop offset=".33" stop-color="#a855f7"/>
+    <stop offset=".66" stop-color="#f5c451"/><stop offset="1" stop-color="#22d3ee"/>
+
+  </linearGradient>
+    <radialGradient id="ambient-0"><stop stop-color="#22d3ee" stop-opacity=".32"/><stop offset=".45" stop-color="#22d3ee" stop-opacity=".09"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+    <radialGradient id="core-0"><stop stop-color="#091424"/><stop offset=".72" stop-color="#080c17"/><stop offset="1" stop-color="#22d3ee" stop-opacity=".24"/></radialGradient>
+    <linearGradient id="rim-0" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#baf8ff"/><stop offset=".3" stop-color="#22d3ee"/><stop offset=".6" stop-color="#101827"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+    <clipPath id="portal-clip-0"><circle r="82"/></clipPath>
+    <radialGradient id="ambient-1"><stop stop-color="#a855f7" stop-opacity=".32"/><stop offset=".45" stop-color="#a855f7" stop-opacity=".09"/><stop offset="1" stop-color="#a855f7" stop-opacity="0"/></radialGradient>
+    <radialGradient id="core-1"><stop stop-color="#091424"/><stop offset=".72" stop-color="#080c17"/><stop offset="1" stop-color="#a855f7" stop-opacity=".24"/></radialGradient>
+    <linearGradient id="rim-1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ead7ff"/><stop offset=".3" stop-color="#a855f7"/><stop offset=".6" stop-color="#101827"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+    <clipPath id="portal-clip-1"><circle r="112"/></clipPath>
+    <radialGradient id="ambient-2"><stop stop-color="#f5c451" stop-opacity=".32"/><stop offset=".45" stop-color="#f5c451" stop-opacity=".09"/><stop offset="1" stop-color="#f5c451" stop-opacity="0"/></radialGradient>
+    <radialGradient id="core-2"><stop stop-color="#091424"/><stop offset=".72" stop-color="#080c17"/><stop offset="1" stop-color="#f5c451" stop-opacity=".24"/></radialGradient>
+    <linearGradient id="rim-2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0b0"/><stop offset=".3" stop-color="#f5c451"/><stop offset=".6" stop-color="#101827"/><stop offset="1" stop-color="#f5c451"/></linearGradient>
+    <clipPath id="portal-clip-2"><circle r="82"/></clipPath>
+      <linearGradient id="name-metal" x1="0" y1="0" x2="0" y2="1">
+        <stop stop-color="#fff"/><stop offset=".38" stop-color="#c7e2f1"/>
+        <stop offset=".48" stop-color="#809bb7"/><stop offset=".49" stop-color="#f4fbff"/>
+        <stop offset=".7" stop-color="#dce9f7"/><stop offset="1" stop-color="#8ba6c9"/>
+      </linearGradient>
+      <linearGradient id="name-light"><stop stop-color="#fff" stop-opacity="0"/><stop offset=".45" stop-color="#baf8ff" stop-opacity=".25"/><stop offset=".5" stop-color="#fff" stop-opacity=".9"/><stop offset=".55" stop-color="#ead7ff" stop-opacity=".25"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+      <clipPath id="name-mask"><text x="640" y="166" text-anchor="middle" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="82" font-weight="800" letter-spacing="5" >MAXWELL NIXON</text></clipPath>
+      <clipPath id="frame"><rect width="1280" height="620" rx="22"/></clipPath>
+      <filter id="bloom" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter>
+      <radialGradient id="sky"><stop stop-color="#10263a" stop-opacity=".65"/><stop offset="1" stop-color="#05060a" stop-opacity="0"/></radialGradient>
+      <linearGradient id="floor-fade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#05060a" stop-opacity=".8"/><stop offset="1" stop-color="#05060a" stop-opacity="0"/></linearGradient>
+    </defs>
+    <g clip-path="url(#frame)">
+      <rect width="1280" height="620" fill="#05060a"/>
+      <ellipse cx="640" cy="250" rx="680" ry="310" fill="url(#sky)"/>
+      <circle class="star" cx="15.0" cy="81.6" r="1.3" fill="#dbeafe" opacity=".4" style="animation-delay:-5.6s"/><circle class="star" cx="667.4" cy="229.4" r="0.9" fill="#dbeafe" opacity=".4" style="animation-delay:-1.9s"/><circle class="star" cx="708.3" cy="368.8" r="0.7" fill="#dbeafe" opacity=".4" style="animation-delay:-1.2s"/><circle class="star" cx="978.0" cy="277.9" r="0.6" fill="#dbeafe" opacity=".4" style="animation-delay:-2.9s"/><circle class="star" cx="375.4" cy="284.9" r="0.7" fill="#dbeafe" opacity=".4" style="animation-delay:-7.8s"/><circle class="star" cx="316.8" cy="432.4" r="0.6" fill="#dbeafe" opacity=".4" style="animation-delay:-1.1s"/><circle class="star" cx="197.9" cy="180.1" r="0.9" fill="#dbeafe" opacity=".4" style="animation-delay:-6.1s"/><circle class="star" cx="95.4" cy="447.6" r="0.9" fill="#dbeafe" opacity=".4" style="animation-delay:-5.0s"/><circle class="star" cx="870.5" cy="470.4" r="1.0" fill="#dbeafe" opacity=".4" style="animation-delay:-7.4s"/><circle class="star" cx="1059.4" cy="72.2" r="0.6" fill="#dbeafe" opacity=".4" style="animation-delay:-2.9s"/><circle class="star" cx="544.4" cy="63.7" r="0.5" fill="#dbeafe" opacity=".4" style="animation-delay:-6.1s"/><circle class="star" cx="472.3" cy="238.5" r="0.9" fill="#dbeafe" opacity=".4" style="animation-delay:-7.6s"/><circle class="star" cx="900.2" cy="351.0" r="0.7" fill="#dbeafe" opacity=".4" style="animation-delay:-2.9s"/><circle class="star" cx="177.7" cy="112.3" r="1.3" fill="#dbeafe" opacity=".4" style="animation-delay:-2.6s"/><circle class="star" cx="243.7" cy="326.8" r="0.8" fill="#dbeafe" opacity=".4" style="animation-delay:-0.3s"/><circle class="star" cx="875.8" cy="451.2" r="0.9" fill="#dbeafe" opacity=".4" style="animation-delay:-6.6s"/><circle class="star" cx="838.7" cy="450.5" r="0.6" fill="#dbeafe" opacity=".4" style="animation-delay:-4.2s"/><circle class="star" cx="830.9" cy="438.2" r="1.3" fill="#dbeafe" opacity=".4" style="animation-delay:-6.7s"/><circle class="star" cx="760.6" cy="469.5" r="1.3" fill="#dbeafe" opacity=".4" style="animation-delay:-4.4s"/><circle class="star" cx="1047.7" cy="57.5" r="0.9" fill="#dbeafe" opacity=".4" style="animation-delay:-2.6s"/><circle class="star" cx="927.1" cy="291.3" r="1.1" fill="#dbeafe" opacity=".4" style="animation-delay:-7.8s"/><circle class="star" cx="713.7" cy="409.0" r="0.8" fill="#dbeafe" opacity=".4" style="animation-delay:-5.1s"/><circle class="star" cx="945.3" cy="292.2" r="0.7" fill="#dbeafe" opacity=".4" style="animation-delay:-1.9s"/><circle class="star" cx="11.9" cy="65.4" r="1.3" fill="#dbeafe" opacity=".4" style="animation-delay:-6.7s"/><circle class="star" cx="807.2" cy="61.2" r="1.0" fill="#dbeafe" opacity=".4" style="animation-delay:-4.8s"/><circle class="star" cx="917.6" cy="482.8" r="0.7" fill="#dbeafe" opacity=".4" style="animation-delay:-7.9s"/><circle class="star" cx="832.0" cy="401.1" r="1.0" fill="#dbeafe" opacity=".4" style="animation-delay:-6.6s"/><circle class="star" cx="178.0" cy="482.5" r="0.9" fill="#dbeafe" opacity=".4" style="animation-delay:-4.5s"/><circle class="star" cx="205.9" cy="225.4" r="0.6" fill="#dbeafe" opacity=".4" style="animation-delay:-6.5s"/><circle class="star" cx="1102.8" cy="371.4" r="1.0" fill="#dbeafe" opacity=".4" style="animation-delay:-7.9s"/><circle class="star" cx="779.9" cy="371.7" r="1.3" fill="#dbeafe" opacity=".4" style="animation-delay:-3.9s"/><circle class="star" cx="294.1" cy="306.1" r="1.2" fill="#dbeafe" opacity=".4" style="animation-delay:-6.8s"/><circle class="star" cx="243.1" cy="293.6" r="0.9" fill="#dbeafe" opacity=".4" style="animation-delay:-4.2s"/><circle class="star" cx="230.7" cy="162.8" r="0.8" fill="#dbeafe" opacity=".4" style="animation-delay:-3.8s"/><circle class="star" cx="218.7" cy="56.4" r="0.6" fill="#dbeafe" opacity=".4" style="animation-delay:-0.2s"/><circle class="star" cx="137.3" cy="431.8" r="1.3" fill="#dbeafe" opacity=".4" style="animation-delay:-0.5s"/><circle class="star" cx="223.3" cy="229.2" r="0.9" fill="#dbeafe" opacity=".4" style="animation-delay:-5.9s"/><circle class="star" cx="471.4" cy="209.8" r="1.2" fill="#dbeafe" opacity=".4" style="animation-delay:-5.7s"/><circle class="star" cx="1024.1" cy="282.9" r="1.2" fill="#dbeafe" opacity=".4" style="animation-delay:-3.3s"/><circle class="star" cx="720.2" cy="180.8" r="0.9" fill="#dbeafe" opacity=".4" style="animation-delay:-6.2s"/><circle class="star" cx="102.4" cy="163.4" r="1.2" fill="#dbeafe" opacity=".4" style="animation-delay:-6.6s"/><circle class="star" cx="991.6" cy="239.8" r="0.8" fill="#dbeafe" opacity=".4" style="animation-delay:-7.4s"/><circle class="star" cx="321.7" cy="210.4" r="0.9" fill="#dbeafe" opacity=".4" style="animation-delay:-6.6s"/><circle class="star" cx="517.2" cy="474.1" r="0.9" fill="#dbeafe" opacity=".4" style="animation-delay:-3.5s"/><circle class="star" cx="433.4" cy="285.9" r="0.7" fill="#dbeafe" opacity=".4" style="animation-delay:-7.1s"/><circle class="star" cx="732.5" cy="479.0" r="1.2" fill="#dbeafe" opacity=".4" style="animation-delay:-4.0s"/><circle class="star" cx="559.1" cy="355.0" r="1.3" fill="#dbeafe" opacity=".4" style="animation-delay:-4.4s"/><circle class="star" cx="841.4" cy="124.8" r="1.1" fill="#dbeafe" opacity=".4" style="animation-delay:-3.1s"/><circle class="star" cx="780.4" cy="423.1" r="0.8" fill="#dbeafe" opacity=".4" style="animation-delay:-2.4s"/><circle class="star" cx="115.9" cy="348.9" r="1.1" fill="#dbeafe" opacity=".4" style="animation-delay:-7.7s"/><circle class="star" cx="406.3" cy="166.6" r="0.5" fill="#dbeafe" opacity=".4" style="animation-delay:-5.8s"/><circle class="star" cx="1185.5" cy="392.2" r="1.2" fill="#dbeafe" opacity=".4" style="animation-delay:-7.7s"/>
+      <g fill="none" stroke="#314263" stroke-opacity=".32"><path d="M640 325L-1500 620"/><path d="M640 325L-1260 620"/><path d="M640 325L-1020 620"/><path d="M640 325L-780 620"/><path d="M640 325L-540 620"/><path d="M640 325L-300 620"/><path d="M640 325L-60 620"/><path d="M640 325L180 620"/><path d="M640 325L420 620"/><path d="M640 325L660 620"/><path d="M640 325L900 620"/><path d="M640 325L1140 620"/><path d="M640 325L1380 620"/><path d="M640 325L1620 620"/><path d="M640 325L1860 620"/><path d="M640 325L2100 620"/><path d="M640 325L2340 620"/><path d="M640 325L2580 620"/><path d="M640 325L2820 620"/><path d="M0 337H1280"/><path d="M0 354H1280"/><path d="M0 379H1280"/><path d="M0 416H1280"/><path d="M0 468H1280"/><path d="M0 539H1280"/><path d="M0 619H1280"/></g>
+      <rect y="325" width="1280" height="160" fill="url(#floor-fade)"/>
+      <g fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-opacity=".5" stroke-dasharray="9 111" class="portal-flow"><path d="M300 545Q460 285 640 543Q820 285 980 545"/></g>
+
+    <ellipse cx="300" cy="432" rx="190" ry="152" fill="url(#ambient-0)"/>
+    <ellipse cx="300" cy="542" rx="147.25" ry="30" fill="url(#ambient-0)"/>
+    <path d="M233.5 527L167 620H433L366.5 527Z" fill="url(#ambient-0)" opacity=".45"/>
+    <g transform="translate(300 432) scale(0.82 1)">
+      <circle cx="8" cy="4" r="99" fill="#070a11" stroke="#1e293b" stroke-width="9"/>
+      <circle r="95" fill="url(#core-0)" stroke="url(#rim-0)" stroke-width="9"/>
+      <circle r="87" fill="none" stroke="#22d3ee" stroke-width="3" filter="url(#bloom)"/>
+      <circle r="86" fill="none" stroke="#baf8ff" stroke-width="1.5"/>
+      <circle class="portal-spin" r="104" fill="none" stroke="#22d3ee" stroke-width="3" stroke-dasharray="38 10 3 10" style="animation-delay:-0s"/>
+      <circle class="portal-spin portal-reverse" r="90" fill="none" stroke="#baf8ff" stroke-width="2" stroke-dasharray="60 90 2 20" opacity=".6"/>
+      <g clip-path="url(#portal-clip-0)">
+        <circle class="portal-depth" r="79" fill="none" stroke="#22d3ee" stroke-width="1" opacity=".18" style="animation-delay:-0s"/><circle class="portal-depth" r="79" fill="none" stroke="#22d3ee" stroke-width="1" opacity=".18" style="animation-delay:-4s"/><circle class="portal-depth" r="79" fill="none" stroke="#22d3ee" stroke-width="1" opacity=".18" style="animation-delay:-8s"/>
+        <g fill="none" stroke="#67e8f9" stroke-width="1.5" opacity=".65">
+    <path d="M-66-32H-34V-56H-8M-65 36H-36V60H-8M64-44H36V-18H18M66 44H42V18H18M-10-78V-22M-10 78V22"/>
+    <rect x="-22" y="-22" width="44" height="44" rx="6"/><rect x="-13" y="-13" width="26" height="26" rx="3"/>
+    <circle cx="-66" cy="-32" r="3" fill="#baf8ff"/><circle cx="66" cy="44" r="3" fill="#baf8ff"/>
+  </g>
+      </g>
+      <path d="M-66.5 -67.45A95 95 0 0 1 66.5 -67.45" fill="none" stroke="#baf8ff" stroke-width="2" opacity=".8"/>
+      <path d="M-20 104H20L32 113H-32Z" fill="#162131" stroke="#22d3ee" stroke-opacity=".35"/>
+    </g>
+    <text x="300" y="574" text-anchor="middle" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="15" letter-spacing="2" fill="#baf8ff">systems</text>
+    <ellipse cx="640" cy="418" rx="250" ry="200" fill="url(#ambient-1)"/>
+    <ellipse cx="640" cy="558" rx="193.75" ry="30" fill="url(#ambient-1)"/>
+    <path d="M552.5 543L465 620H815L727.5 543Z" fill="url(#ambient-1)" opacity=".45"/>
+    <g transform="translate(640 418) scale(1 1)">
+      <circle cx="8" cy="4" r="129" fill="#070a11" stroke="#1e293b" stroke-width="9"/>
+      <circle r="125" fill="url(#core-1)" stroke="url(#rim-1)" stroke-width="9"/>
+      <circle r="117" fill="none" stroke="#a855f7" stroke-width="3" filter="url(#bloom)"/>
+      <circle r="116" fill="none" stroke="#ead7ff" stroke-width="1.5"/>
+      <circle class="portal-spin" r="134" fill="none" stroke="#a855f7" stroke-width="3" stroke-dasharray="38 10 3 10" style="animation-delay:-7s"/>
+      <circle class="portal-spin portal-reverse" r="120" fill="none" stroke="#ead7ff" stroke-width="2" stroke-dasharray="60 90 2 20" opacity=".6"/>
+      <g clip-path="url(#portal-clip-1)">
+        <circle class="portal-depth" r="109" fill="none" stroke="#a855f7" stroke-width="1" opacity=".18" style="animation-delay:-1s"/><circle class="portal-depth" r="109" fill="none" stroke="#a855f7" stroke-width="1" opacity=".18" style="animation-delay:-5s"/><circle class="portal-depth" r="109" fill="none" stroke="#a855f7" stroke-width="1" opacity=".18" style="animation-delay:-9s"/>
+        <g fill="none" stroke="#c4b5fd" stroke-width="1" opacity=".5">
+    <circle r="75"/><ellipse rx="38" ry="75"/><ellipse rx="15" ry="75"/>
+    <ellipse rx="75" ry="24"/><path d="M-71-24H71M-71 24H71M-54-52H54M-54 52H54M0-75V75"/>
+  </g><path d="M-82 32L-58 5L-34 22L-6-13L23 18L46-4L79 29V78H-82Z" fill="#070c1b" fill-opacity=".8" stroke="#a78bfa" stroke-width="1.4"/>
+    <path d="M-82 55L-34 22L23 18L79 55M-58 5L-45 78M-6-13L-9 78M46-4L55 78" fill="none" stroke="#a78bfa" opacity=".5"/>
+      </g>
+      <path d="M-87.5 -88.75A125 125 0 0 1 87.5 -88.75" fill="none" stroke="#ead7ff" stroke-width="2" opacity=".8"/>
+      <path d="M-20 134H20L32 143H-32Z" fill="#162131" stroke="#a855f7" stroke-opacity=".35"/>
+    </g>
+    <text x="640" y="590" text-anchor="middle" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="15" letter-spacing="2" fill="#ead7ff">worlds</text>
+    <ellipse cx="980" cy="432" rx="190" ry="152" fill="url(#ambient-2)"/>
+    <ellipse cx="980" cy="542" rx="147.25" ry="30" fill="url(#ambient-2)"/>
+    <path d="M913.5 527L847 620H1113L1046.5 527Z" fill="url(#ambient-2)" opacity=".45"/>
+    <g transform="translate(980 432) scale(0.82 1)">
+      <circle cx="8" cy="4" r="99" fill="#070a11" stroke="#1e293b" stroke-width="9"/>
+      <circle r="95" fill="url(#core-2)" stroke="url(#rim-2)" stroke-width="9"/>
+      <circle r="87" fill="none" stroke="#f5c451" stroke-width="3" filter="url(#bloom)"/>
+      <circle r="86" fill="none" stroke="#fff0b0" stroke-width="1.5"/>
+      <circle class="portal-spin" r="104" fill="none" stroke="#f5c451" stroke-width="3" stroke-dasharray="38 10 3 10" style="animation-delay:-14s"/>
+      <circle class="portal-spin portal-reverse" r="90" fill="none" stroke="#fff0b0" stroke-width="2" stroke-dasharray="60 90 2 20" opacity=".6"/>
+      <g clip-path="url(#portal-clip-2)">
+        <circle class="portal-depth" r="79" fill="none" stroke="#f5c451" stroke-width="1" opacity=".18" style="animation-delay:-2s"/><circle class="portal-depth" r="79" fill="none" stroke="#f5c451" stroke-width="1" opacity=".18" style="animation-delay:-6s"/><circle class="portal-depth" r="79" fill="none" stroke="#f5c451" stroke-width="1" opacity=".18" style="animation-delay:-10s"/>
+        <g stroke="#f5c451" fill="none" opacity=".55"><path d="M-52-40L-8-61L48-27L55 34L2 57L-49 24Z M0 0L-52-40M0 0L48-27M0 0L2 57M-8-61L-49 24M55 34L-8-61"/></g>
+    <circle class="portal-core" cx="-52" cy="-40" r="3" fill="#fff0b0" style="animation-delay:-0s"/><circle class="portal-core" cx="-8" cy="-61" r="3" fill="#fff0b0" style="animation-delay:-1s"/><circle class="portal-core" cx="48" cy="-27" r="3" fill="#fff0b0" style="animation-delay:-2s"/><circle class="portal-core" cx="55" cy="34" r="3" fill="#fff0b0" style="animation-delay:-3s"/><circle class="portal-core" cx="2" cy="57" r="3" fill="#fff0b0" style="animation-delay:-4s"/><circle class="portal-core" cx="-49" cy="24" r="3" fill="#fff0b0" style="animation-delay:-5s"/><circle class="portal-core" cx="0" cy="0" r="6" fill="#fff0b0" style="animation-delay:-6s"/>
+      </g>
+      <path d="M-66.5 -67.45A95 95 0 0 1 66.5 -67.45" fill="none" stroke="#fff0b0" stroke-width="2" opacity=".8"/>
+      <path d="M-20 104H20L32 113H-32Z" fill="#162131" stroke="#f5c451" stroke-opacity=".35"/>
+    </g>
+    <text x="980" y="574" text-anchor="middle" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="15" letter-spacing="2" fill="#fff0b0">ideas</text>
+      <g font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="13" fill="#8b93a7"><circle cx="30" cy="30" r="5" fill="#22d3ee"/><text x="48" y="35">~/iM4x3ll</text><text x="1250" y="35" text-anchor="end">maxwellnixon.com</text></g>
+      <g transform="translate(0 4)"><text x="640" y="166" text-anchor="middle" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="82" font-weight="800" letter-spacing="5" fill="#14243b" stroke="#243e5b" stroke-width="1">MAXWELL NIXON</text></g>
+      <text x="640" y="166" text-anchor="middle" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="82" font-weight="800" letter-spacing="5" fill="none" stroke="url(#sweep)" stroke-width="2" opacity=".3" filter="url(#bloom)">MAXWELL NIXON</text>
+      <text x="640" y="166" text-anchor="middle" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="82" font-weight="800" letter-spacing="5" fill="url(#name-metal)" stroke="#d8f1ff" stroke-width=".45">MAXWELL NIXON</text>
+      <g clip-path="url(#name-mask)"><g class="name-sheen"><path d="M-95 85H-10L95 185H10Z" fill="url(#name-light)"/></g></g>
+      <text x="640" y="207" text-anchor="middle" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="17" fill="#8b93a7">systems  ·  operating systems  ·  games  ·  web  ·  local AI</text>
+      <clipPath id="type-0"><rect class="typed-window" x="418.875" y="232" width="442.25" height="30" style="--chars:45;--width:442.25px;animation-delay:-30s"/></clipPath>
+      <g class="typed-line first-line" style="animation-delay:-30s"><text x="418.875" y="254" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="16" fill="#e8ecf4" clip-path="url(#type-0)">&gt; three game engines, one process, one portal</text></g><clipPath id="type-1"><rect class="typed-window" x="370.625" y="232" width="538.75" height="30" style="--chars:55;--width:538.75px;animation-delay:-24s"/></clipPath>
+      <g class="typed-line " style="animation-delay:-24s"><text x="370.625" y="254" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="16" fill="#e8ecf4" clip-path="url(#type-1)">&gt; a Linux distro that builds and boots from one command</text></g><clipPath id="type-2"><rect class="typed-window" x="481.6" y="232" width="316.8" height="30" style="--chars:32;--width:316.8px;animation-delay:-18s"/></clipPath>
+      <g class="typed-line " style="animation-delay:-18s"><text x="481.6" y="254" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="16" fill="#e8ecf4" clip-path="url(#type-2)">&gt; a whole game launcher in 90 KB</text></g><clipPath id="type-3"><rect class="typed-window" x="409.225" y="232" width="461.55" height="30" style="--chars:47;--width:461.55px;animation-delay:-12s"/></clipPath>
+      <g class="typed-line " style="animation-delay:-12s"><text x="409.225" y="254" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="16" fill="#e8ecf4" clip-path="url(#type-3)">&gt; local AI on one GPU, nothing leaves the house</text></g><clipPath id="type-4"><rect class="typed-window" x="438.17499999999995" y="232" width="403.65000000000003" height="30" style="--chars:41;--width:403.65000000000003px;animation-delay:-6s"/></clipPath>
+      <g class="typed-line " style="animation-delay:-6s"><text x="438.17499999999995" y="254" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="16" fill="#e8ecf4" clip-path="url(#type-4)">&gt; IT for law firms and courtrooms, 9 to 5</text></g>
+      <path d="M0 619H1280" stroke="url(#sweep)" stroke-width="2" opacity=".7"/>
+    </g><rect x=".5" y=".5" width="1279" height="619" rx="22" fill="none" stroke="#1b2030"/></svg>

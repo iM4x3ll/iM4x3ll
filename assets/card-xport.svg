@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 440" width="620" height="440" role="img"><style>
+  .star { animation: shimmer 8s ease-in-out infinite; }
+  .orbit { transform-box: fill-box; transform-origin: center; animation: orbit 32s linear infinite; }
+  .counter-orbit { animation-direction: reverse; animation-duration: 44s; }
+  .packet { animation: packet 8s linear infinite; }
+  .grid-row { animation: grid 6s linear infinite; }
+  .typed-line { opacity: 0; animation: type-line 30s steps(1,end) infinite; }
+  .typed-window { animation: typing 30s steps(var(--chars),end) infinite; }
+  .first-line { opacity: 1; }
+  .cursor { animation: blink 1.2s steps(1,end) infinite; }
+  .reveal { animation: reveal .7s ease-out both; }
+  .card-trace { animation: trace 14s linear infinite; }
+  @keyframes shimmer { 50% { opacity: .22; } }
+  @keyframes orbit { to { transform: rotate(360deg); } }
+  @keyframes packet { 0% { transform: translateX(0); opacity: 0; } 10%,85% { opacity: .8; } 100% { transform: translateX(360px); opacity: 0; } }
+  @keyframes grid { 0% { transform: translateY(0); opacity: 0; } 20% { opacity: .28; } 80% { opacity: .28; } 100% { transform: translateY(var(--travel)); opacity: 0; } }
+  @keyframes type-line { 0%,19.99% { opacity: 1; } 20%,100% { opacity: 0; } }
+  @keyframes typing { 0% { width: 0; } 8%,17% { width: var(--width); } 19%,100% { width: 0; } }
+  @keyframes blink { 50% { opacity: .15; } }
+  @keyframes reveal { from { opacity: .15; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes trace { to { stroke-dashoffset: -1000; } }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; }
+    .typed-line { opacity: 0; }
+    .first-line { opacity: 1; }
+    .typed-window { width: var(--width); }
+    .grid-row { opacity: .2; }
+    .cursor { opacity: .7; }
+  }
+</style>
+  <title>XPort</title>
+  <defs><clipPath id="art"><rect width="620" height="248" rx="18"/></clipPath><radialGradient id="g" cx="1" cy="0" r="1"><stop offset="0" stop-color="#22d3ee" stop-opacity=".22"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient></defs>
+  <rect width="620" height="440" rx="18" fill="#0b0d14"/>
+  <rect width="620" height="440" rx="18" fill="url(#g)"/>
+  <g clip-path="url(#art)"><rect width="620" height="248" fill="#08121f"/><path d="M0 225H620" stroke="#22d3ee" opacity=".25"/><circle cx="410" cy="88" r="52" fill="#f79abc" opacity=".14"/><rect x="24" y="120" width="21" height="60" fill="#305769" opacity=".65"/><path d="M31 128V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="50" y="84" width="21" height="96" fill="#305769" opacity=".65"/><path d="M57 92V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="76" y="102" width="21" height="78" fill="#305769" opacity=".65"/><path d="M83 110V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="102" y="60" width="21" height="120" fill="#305769" opacity=".65"/><path d="M109 68V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="128" y="115" width="21" height="65" fill="#305769" opacity=".65"/><path d="M135 123V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="154" y="77" width="21" height="103" fill="#305769" opacity=".65"/><path d="M161 85V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="180" y="100" width="21" height="80" fill="#305769" opacity=".65"/><path d="M187 108V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="355" y="105" width="21" height="75" fill="#7f4d88" opacity=".65"/><path d="M362 113V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="381" y="60" width="21" height="120" fill="#7f4d88" opacity=".65"/><path d="M388 68V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="407" y="91" width="21" height="89" fill="#7f4d88" opacity=".65"/><path d="M414 99V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="433" y="119" width="21" height="61" fill="#7f4d88" opacity=".65"/><path d="M440 127V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="459" y="75" width="21" height="105" fill="#7f4d88" opacity=".65"/><path d="M466 83V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="485" y="101" width="21" height="79" fill="#7f4d88" opacity=".65"/><path d="M492 109V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="511" y="68" width="21" height="112" fill="#7f4d88" opacity=".65"/><path d="M518 76V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="537" y="113" width="21" height="67" fill="#7f4d88" opacity=".65"/><path d="M544 121V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="563" y="80" width="21" height="100" fill="#7f4d88" opacity=".65"/><path d="M570 88V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/>
+      <path d="M0 244L290 180L620 244M80 248L290 180M540 248L290 180" stroke="#264352" fill="none"/>
+      <rect x="233" y="28" width="156" height="189" rx="30" fill="#07101b" stroke="#285266" stroke-width="10"/>
+      <rect x="239" y="33" width="144" height="179" rx="27" fill="#142836" stroke="#6fe7fb" stroke-width="3"/>
+      <rect x="253" y="112" width="21" height="68" fill="#8772b5" opacity=".65"/><path d="M260 120V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="279" y="93" width="21" height="87" fill="#8772b5" opacity=".65"/><path d="M286 101V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="305" y="65" width="21" height="115" fill="#8772b5" opacity=".65"/><path d="M312 73V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="331" y="100" width="21" height="80" fill="#8772b5" opacity=".65"/><path d="M338 108V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><rect x="357" y="76" width="21" height="104" fill="#8772b5" opacity=".65"/><path d="M364 84V171" stroke="#ebf5ff" stroke-dasharray="3 8" opacity=".3"/><path d="M248 200L310 165L374 200" stroke="#ffb2d8" fill="none"/>
+      <text x="36" y="32" fill="#88bcd1" font-family="Consolas,monospace" font-size="12">host world</text><text x="310" y="67" text-anchor="middle" fill="#c5f7ff" font-family="Consolas,monospace" font-size="12">guest world</text></g>
+  <rect x="418" y="218" width="180" height="23" rx="6" fill="#070c15" fill-opacity=".85"/>
+  <text x="588" y="234" text-anchor="end" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="11" fill="#bac9d8">Project illustration</text>
+  <rect x="1" y="1" width="618" height="438" rx="17" fill="none" stroke="#1b2030"/>
+  <text x="32" y="278" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="13" letter-spacing="2" fill="#22d3ee">C++</text>
+  <text x="588" y="278" text-anchor="end" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="13" fill="#8b93a7">open ↗</text>
+  <text x="32" y="315" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="29" font-weight="700" fill="#e8ecf4">XPort</text>
+  <text x="32" y="344" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="15.5" fill="#8b93a7">Walkable portals between GTA III, Vice City and San</text><text x="32" y="366" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="15.5" fill="#8b93a7">Andreas: three engines running in one process.</text>
+  <rect x="32" y="391" width="46" height="26" rx="13" fill="#22d3ee" fill-opacity=".1" stroke="#22d3ee" stroke-opacity=".35"/><text x="54.9" y="409" text-anchor="middle" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12.5" fill="#22d3ee">C++</text><rect x="85.7" y="391" width="101" height="26" rx="13" fill="#22d3ee" fill-opacity=".1" stroke="#22d3ee" stroke-opacity=".35"/><text x="136.2" y="409" text-anchor="middle" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12.5" fill="#22d3ee">Direct3D 9</text><rect x="194.7" y="391" width="148" height="26" rx="13" fill="#22d3ee" fill-opacity=".1" stroke="#22d3ee" stroke-opacity=".35"/><text x="268.9" y="409" text-anchor="middle" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12.5" fill="#22d3ee">Engine internals</text></svg>

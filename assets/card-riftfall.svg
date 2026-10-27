@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 440" width="620" height="440" role="img"><style>
+  .star { animation: shimmer 8s ease-in-out infinite; }
+  .orbit { transform-box: fill-box; transform-origin: center; animation: orbit 32s linear infinite; }
+  .counter-orbit { animation-direction: reverse; animation-duration: 44s; }
+  .packet { animation: packet 8s linear infinite; }
+  .grid-row { animation: grid 6s linear infinite; }
+  .typed-line { opacity: 0; animation: type-line 30s steps(1,end) infinite; }
+  .typed-window { animation: typing 30s steps(var(--chars),end) infinite; }
+  .first-line { opacity: 1; }
+  .cursor { animation: blink 1.2s steps(1,end) infinite; }
+  .reveal { animation: reveal .7s ease-out both; }
+  .card-trace { animation: trace 14s linear infinite; }
+  @keyframes shimmer { 50% { opacity: .22; } }
+  @keyframes orbit { to { transform: rotate(360deg); } }
+  @keyframes packet { 0% { transform: translateX(0); opacity: 0; } 10%,85% { opacity: .8; } 100% { transform: translateX(360px); opacity: 0; } }
+  @keyframes grid { 0% { transform: translateY(0); opacity: 0; } 20% { opacity: .28; } 80% { opacity: .28; } 100% { transform: translateY(var(--travel)); opacity: 0; } }
+  @keyframes type-line { 0%,19.99% { opacity: 1; } 20%,100% { opacity: 0; } }
+  @keyframes typing { 0% { width: 0; } 8%,17% { width: var(--width); } 19%,100% { width: 0; } }
+  @keyframes blink { 50% { opacity: .15; } }
+  @keyframes reveal { from { opacity: .15; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes trace { to { stroke-dashoffset: -1000; } }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; }
+    .typed-line { opacity: 0; }
+    .first-line { opacity: 1; }
+    .typed-window { width: var(--width); }
+    .grid-row { opacity: .2; }
+    .cursor { opacity: .7; }
+  }
+</style>
+  <title>Riftfall</title>
+  <defs><clipPath id="art"><rect width="620" height="248" rx="18"/></clipPath><radialGradient id="g" cx="1" cy="0" r="1"><stop offset="0" stop-color="#38bdf8" stop-opacity=".22"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient></defs>
+  <rect width="620" height="440" rx="18" fill="#0b0d14"/>
+  <rect width="620" height="440" rx="18" fill="url(#g)"/>
+  <g clip-path="url(#art)"><rect width="620" height="248" fill="#08121f"/><path d="M0 225H620" stroke="#38bdf8" opacity=".25"/><g stroke="#4186a7" fill="none" opacity=".4"><ellipse cx="310" cy="50" rx="72" ry="26"/><ellipse cx="310" cy="50" rx="83" ry="32"/></g><path d="M288 58L269 178H351L332 58Z" fill="#38bdf8" opacity=".08"/>
+    <path d="M112 147L265 91L476 139L346 204Z" fill="#31585c"/><path d="M112 147L346 204L333 234L197 213Z" fill="#172e3c"/><path d="M346 204L476 139L418 213L333 234Z" fill="#223848"/>
+    <path d="M247 122L234 102L254 79L287 115Z M363 150L386 117L421 154Z" fill="#568b78"/>
+    <circle cx="202" cy="148" r="5" fill="#a7edff"/><circle cx="202" cy="148" r="12" fill="#38bdf8" opacity=".12"/><circle cx="292" cy="131" r="5" fill="#a7edff"/><circle cx="292" cy="131" r="12" fill="#38bdf8" opacity=".12"/><circle cx="372" cy="168" r="5" fill="#a7edff"/><circle cx="372" cy="168" r="12" fill="#38bdf8" opacity=".12"/><circle cx="436" cy="116" r="5" fill="#a7edff"/><circle cx="436" cy="116" r="12" fill="#38bdf8" opacity=".12"/>
+    <path d="M74 154L48 168L68 177Z M502 158L522 145L530 164Z M389 231L400 244L417 235Z" fill="#2a5263"/></g>
+  <rect x="418" y="218" width="180" height="23" rx="6" fill="#070c15" fill-opacity=".85"/>
+  <text x="588" y="234" text-anchor="end" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="11" fill="#bac9d8">Project illustration</text>
+  <rect x="1" y="1" width="618" height="438" rx="17" fill="none" stroke="#1b2030"/>
+  <text x="32" y="278" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="13" letter-spacing="2" fill="#38bdf8">Luau</text>
+  <text x="588" y="278" text-anchor="end" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="13" fill="#8b93a7">open ↗</text>
+  <text x="32" y="315" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="29" font-weight="700" fill="#e8ecf4">Riftfall</text>
+  <text x="32" y="344" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="15.5" fill="#8b93a7">A co-op Roblox game: raid an unstable dimension,</text><text x="32" y="366" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="15.5" fill="#8b93a7">bank the loot, escape before it collapses.</text>
+  <rect x="32" y="391" width="54" height="26" rx="13" fill="#38bdf8" fill-opacity=".1" stroke="#38bdf8" stroke-opacity=".35"/><text x="58.8" y="409" text-anchor="middle" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12.5" fill="#38bdf8">Luau</text><rect x="93.6" y="391" width="69" height="26" rx="13" fill="#38bdf8" fill-opacity=".1" stroke="#38bdf8" stroke-opacity=".35"/><text x="128.3" y="409" text-anchor="middle" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12.5" fill="#38bdf8">Roblox</text><rect x="171" y="391" width="180" height="26" rx="13" fill="#38bdf8" fill-opacity=".1" stroke="#38bdf8" stroke-opacity=".35"/><text x="261.0" y="409" text-anchor="middle" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12.5" fill="#38bdf8">Server-authoritative</text></svg>

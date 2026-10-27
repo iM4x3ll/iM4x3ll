@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 440" width="620" height="440" role="img"><style>
+  .star { animation: shimmer 8s ease-in-out infinite; }
+  .orbit { transform-box: fill-box; transform-origin: center; animation: orbit 32s linear infinite; }
+  .counter-orbit { animation-direction: reverse; animation-duration: 44s; }
+  .packet { animation: packet 8s linear infinite; }
+  .grid-row { animation: grid 6s linear infinite; }
+  .typed-line { opacity: 0; animation: type-line 30s steps(1,end) infinite; }
+  .typed-window { animation: typing 30s steps(var(--chars),end) infinite; }
+  .first-line { opacity: 1; }
+  .cursor { animation: blink 1.2s steps(1,end) infinite; }
+  .reveal { animation: reveal .7s ease-out both; }
+  .card-trace { animation: trace 14s linear infinite; }
+  @keyframes shimmer { 50% { opacity: .22; } }
+  @keyframes orbit { to { transform: rotate(360deg); } }
+  @keyframes packet { 0% { transform: translateX(0); opacity: 0; } 10%,85% { opacity: .8; } 100% { transform: translateX(360px); opacity: 0; } }
+  @keyframes grid { 0% { transform: translateY(0); opacity: 0; } 20% { opacity: .28; } 80% { opacity: .28; } 100% { transform: translateY(var(--travel)); opacity: 0; } }
+  @keyframes type-line { 0%,19.99% { opacity: 1; } 20%,100% { opacity: 0; } }
+  @keyframes typing { 0% { width: 0; } 8%,17% { width: var(--width); } 19%,100% { width: 0; } }
+  @keyframes blink { 50% { opacity: .15; } }
+  @keyframes reveal { from { opacity: .15; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes trace { to { stroke-dashoffset: -1000; } }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; }
+    .typed-line { opacity: 0; }
+    .first-line { opacity: 1; }
+    .typed-window { width: var(--width); }
+    .grid-row { opacity: .2; }
+    .cursor { opacity: .7; }
+  }
+</style>
+  <title>Ouija</title>
+  <defs><clipPath id="art"><rect width="620" height="248" rx="18"/></clipPath><radialGradient id="g" cx="1" cy="0" r="1"><stop offset="0" stop-color="#c084fc" stop-opacity=".22"/><stop offset="1" stop-color="#c084fc" stop-opacity="0"/></radialGradient></defs>
+  <rect width="620" height="440" rx="18" fill="#0b0d14"/>
+  <rect width="620" height="440" rx="18" fill="url(#g)"/>
+  <g clip-path="url(#art)"><rect width="620" height="248" fill="#08121f"/><path d="M0 225H620" stroke="#c084fc" opacity=".25"/><rect x="42" y="24" width="536" height="204" rx="12" fill="#13152b" stroke="#4c3a69"/><rect x="42" y="24" width="126" height="204" rx="12" fill="#211a36"/>
+    <text x="62" y="54" fill="#d9c8ff" font-family="Segoe UI,sans-serif" font-size="19" font-weight="700">Ouija</text>
+    <text x="60" y="95" fill="#a794bd" font-family="Consolas,monospace" font-size="12"># general</text><text x="60" y="129" fill="#a794bd" font-family="Consolas,monospace" font-size="12"># projects</text><text x="60" y="163" fill="#a794bd" font-family="Consolas,monospace" font-size="12"># voice</text>
+    <circle cx="200" cy="70" r="12" fill="#c084fc"/><rect x="225" y="59" width="160" height="5" rx="2" fill="#d0c4df" opacity=".8"/><rect x="225" y="74" width="255" height="6" rx="3" fill="#6c5d87"/><circle cx="200" cy="118" r="12" fill="#6bc8cf"/><rect x="225" y="107" width="192" height="5" rx="2" fill="#d0c4df" opacity=".8"/><rect x="225" y="122" width="217" height="6" rx="3" fill="#6c5d87"/><circle cx="200" cy="166" r="12" fill="#cf8ea3"/><rect x="225" y="155" width="224" height="5" rx="2" fill="#d0c4df" opacity=".8"/><rect x="225" y="170" width="179" height="6" rx="3" fill="#6c5d87"/><rect x="190" y="190" width="362" height="21" rx="6" fill="#282038"/></g>
+  <rect x="418" y="218" width="180" height="23" rx="6" fill="#070c15" fill-opacity=".85"/>
+  <text x="588" y="234" text-anchor="end" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="11" fill="#bac9d8">Project illustration</text>
+  <rect x="1" y="1" width="618" height="438" rx="17" fill="none" stroke="#1b2030"/>
+  <text x="32" y="278" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="13" letter-spacing="2" fill="#c084fc">Elixir</text>
+  <text x="588" y="278" text-anchor="end" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="13" fill="#8b93a7">open ↗</text>
+  <text x="32" y="315" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="29" font-weight="700" fill="#e8ecf4">Ouija</text>
+  <text x="32" y="344" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="15.5" fill="#8b93a7">Real-time community chat on the BEAM: Erlang, Elixir</text><text x="32" y="366" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="15.5" fill="#8b93a7">and Gleam, with voice, roles and billing.</text>
+  <rect x="32" y="391" width="69" height="26" rx="13" fill="#c084fc" fill-opacity=".1" stroke="#c084fc" stroke-opacity=".35"/><text x="66.7" y="409" text-anchor="middle" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12.5" fill="#c084fc">Elixir</text><rect x="109.4" y="391" width="62" height="26" rx="13" fill="#c084fc" fill-opacity=".1" stroke="#c084fc" stroke-opacity=".35"/><text x="140.2" y="409" text-anchor="middle" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12.5" fill="#c084fc">Gleam</text><rect x="178.9" y="391" width="77" height="26" rx="13" fill="#c084fc" fill-opacity=".1" stroke="#c084fc" stroke-opacity=".35"/><text x="217.6" y="409" text-anchor="middle" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12.5" fill="#c084fc">LiveKit</text></svg>

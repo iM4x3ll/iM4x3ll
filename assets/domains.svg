@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 364" width="1280" height="364" role="img"><style>
+  .star { animation: shimmer 8s ease-in-out infinite; }
+  .orbit { transform-box: fill-box; transform-origin: center; animation: orbit 32s linear infinite; }
+  .counter-orbit { animation-direction: reverse; animation-duration: 44s; }
+  .packet { animation: packet 8s linear infinite; }
+  .grid-row { animation: grid 6s linear infinite; }
+  .typed-line { opacity: 0; animation: type-line 30s steps(1,end) infinite; }
+  .typed-window { animation: typing 30s steps(var(--chars),end) infinite; }
+  .first-line { opacity: 1; }
+  .cursor { animation: blink 1.2s steps(1,end) infinite; }
+  .reveal { animation: reveal .7s ease-out both; }
+  .card-trace { animation: trace 14s linear infinite; }
+  @keyframes shimmer { 50% { opacity: .22; } }
+  @keyframes orbit { to { transform: rotate(360deg); } }
+  @keyframes packet { 0% { transform: translateX(0); opacity: 0; } 10%,85% { opacity: .8; } 100% { transform: translateX(360px); opacity: 0; } }
+  @keyframes grid { 0% { transform: translateY(0); opacity: 0; } 20% { opacity: .28; } 80% { opacity: .28; } 100% { transform: translateY(var(--travel)); opacity: 0; } }
+  @keyframes type-line { 0%,19.99% { opacity: 1; } 20%,100% { opacity: 0; } }
+  @keyframes typing { 0% { width: 0; } 8%,17% { width: var(--width); } 19%,100% { width: 0; } }
+  @keyframes blink { 50% { opacity: .15; } }
+  @keyframes reveal { from { opacity: .15; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes trace { to { stroke-dashoffset: -1000; } }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; }
+    .typed-line { opacity: 0; }
+    .first-line { opacity: 1; }
+    .typed-window { width: var(--width); }
+    .grid-row { opacity: .2; }
+    .cursor { opacity: .7; }
+  }
+</style><title>What I do</title><rect width="1280" height="364" rx="20" fill="#05060a"/><g>
+      <rect x="24" y="24" width="296" height="150" rx="16" fill="#0b0d14" stroke="#1b2030"/>
+      <rect x="24" y="24" width="296" height="150" rx="16" fill="#22d3ee" fill-opacity=".05"/>
+      <rect x="46" y="48" width="34" height="4" rx="2" fill="#22d3ee"></rect>
+      <text x="298" y="56" text-anchor="end" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12" fill="#22d3ee">01</text>
+      <text x="46" y="90" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="700" fill="#e8ecf4">Infrastructure &amp; IT</text>
+      <text x="46" y="120" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#8b93a7">Windows fleets, Active Directory,</text><text x="46" y="141" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#8b93a7">courtroom setups, MSP ticket work.</text></g><g>
+      <rect x="336" y="24" width="296" height="150" rx="16" fill="#0b0d14" stroke="#1b2030"/>
+      <rect x="336" y="24" width="296" height="150" rx="16" fill="#f472b6" fill-opacity=".05"/>
+      <rect x="358" y="48" width="34" height="4" rx="2" fill="#f472b6"></rect>
+      <text x="610" y="56" text-anchor="end" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12" fill="#f472b6">02</text>
+      <text x="358" y="90" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="700" fill="#e8ecf4">Systems programming</text>
+      <text x="358" y="120" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#8b93a7">Three game engines sharing one</text><text x="358" y="141" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#8b93a7">process and one Direct3D device.</text></g><g>
+      <rect x="648" y="24" width="296" height="150" rx="16" fill="#0b0d14" stroke="#1b2030"/>
+      <rect x="648" y="24" width="296" height="150" rx="16" fill="#a855f7" fill-opacity=".05"/>
+      <rect x="670" y="48" width="34" height="4" rx="2" fill="#a855f7"></rect>
+      <text x="922" y="56" text-anchor="end" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12" fill="#a855f7">03</text>
+      <text x="670" y="90" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="700" fill="#e8ecf4">Operating systems</text>
+      <text x="670" y="120" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#8b93a7">My own Arch-based distro, built</text><text x="670" y="141" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#8b93a7">and booted by a single script.</text></g><g>
+      <rect x="960" y="24" width="296" height="150" rx="16" fill="#0b0d14" stroke="#1b2030"/>
+      <rect x="960" y="24" width="296" height="150" rx="16" fill="#fb923c" fill-opacity=".05"/>
+      <rect x="982" y="48" width="34" height="4" rx="2" fill="#fb923c"></rect>
+      <text x="1234" y="56" text-anchor="end" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12" fill="#fb923c">04</text>
+      <text x="982" y="90" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="700" fill="#e8ecf4">Desktop software</text>
+      <text x="982" y="120" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#8b93a7">Native Windows apps in C# and</text><text x="982" y="141" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#8b93a7">Python. One is a 90 KB launcher.</text></g><g>
+      <rect x="24" y="190" width="296" height="150" rx="16" fill="#0b0d14" stroke="#1b2030"/>
+      <rect x="24" y="190" width="296" height="150" rx="16" fill="#38bdf8" fill-opacity=".05"/>
+      <rect x="46" y="214" width="34" height="4" rx="2" fill="#38bdf8"></rect>
+      <text x="298" y="222" text-anchor="end" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12" fill="#38bdf8">05</text>
+      <text x="46" y="256" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="700" fill="#e8ecf4">Web platforms</text>
+      <text x="46" y="286" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#8b93a7">Next.js sites, live data APIs,</text><text x="46" y="307" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#8b93a7">and a real-time chat backend.</text></g><g>
+      <rect x="336" y="190" width="296" height="150" rx="16" fill="#0b0d14" stroke="#1b2030"/>
+      <rect x="336" y="190" width="296" height="150" rx="16" fill="#4ade80" fill-opacity=".05"/>
+      <rect x="358" y="214" width="34" height="4" rx="2" fill="#4ade80"></rect>
+      <text x="610" y="222" text-anchor="end" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12" fill="#4ade80">06</text>
+      <text x="358" y="256" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="700" fill="#e8ecf4">Local AI</text>
+      <text x="358" y="286" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#8b93a7">Self-hosted models, custom agents,</text><text x="358" y="307" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#8b93a7">and a voice assistant on one GPU.</text></g><g>
+      <rect x="648" y="190" width="296" height="150" rx="16" fill="#0b0d14" stroke="#1b2030"/>
+      <rect x="648" y="190" width="296" height="150" rx="16" fill="#f5c451" fill-opacity=".05"/>
+      <rect x="670" y="214" width="34" height="4" rx="2" fill="#f5c451"></rect>
+      <text x="922" y="222" text-anchor="end" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12" fill="#f5c451">07</text>
+      <text x="670" y="256" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="700" fill="#e8ecf4">Game dev &amp; modding</text>
+      <text x="670" y="286" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#8b93a7">A co-op Roblox game, engine mods,</text><text x="670" y="307" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#8b93a7">RDR2, GTA and BeamNG tinkering.</text></g><g>
+      <rect x="960" y="190" width="296" height="150" rx="16" fill="#0b0d14" stroke="#1b2030"/>
+      <rect x="960" y="190" width="296" height="150" rx="16" fill="#f87171" fill-opacity=".05"/>
+      <rect x="982" y="214" width="34" height="4" rx="2" fill="#f87171"></rect>
+      <text x="1234" y="222" text-anchor="end" font-family="'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="12" fill="#f87171">08</text>
+      <text x="982" y="256" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="700" fill="#e8ecf4">Home lab</text>
+      <text x="982" y="286" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#8b93a7">Media server, DNS filtering,</text><text x="982" y="307" font-family="'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#8b93a7">private cloud and remote access.</text></g></svg>
