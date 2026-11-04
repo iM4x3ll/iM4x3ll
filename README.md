@@ -14,7 +14,7 @@ The rest of the time I build things, mostly to find out whether they can be buil
 
 <p align="center"><img src="assets/domains.svg" alt="What I do: infrastructure and IT, systems programming, operating systems, desktop software, web platforms, local AI, game dev and modding, home lab" width="100%"></p>
 
-<p align="center"><img src="assets/terminal.svg" alt="whoami: roles, stacks and tools across infrastructure, systems, apps, web, Linux, AI and home lab" width="100%"></p>
+<p align="center"><img src="assets/terminal.svg" alt="Bill of materials: roles, stacks and tools across infrastructure, systems, apps, web, Linux, AI and home lab" width="100%"></p>
 
 <p align="center"><img src="assets/divider.svg" alt="" width="100%"></p>
 
