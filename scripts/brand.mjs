@@ -3,9 +3,11 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
-const C = { bg: "#05060a", panel: "#0b0d14", line: "#1b2030", cyan: "#22d3ee", purple: "#a855f7", gold: "#f5c451", text: "#e8ecf4", muted: "#8b93a7" };
-const MONO = "'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace";
-const SANS = "'Segoe UI',Inter,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif";
+// Same circuit-board language as scripts/build.mjs: solder mask, silkscreen, gold pads.
+const C = { bg: "#0b2e22", line: "#1d4f3c", trace: "#17573f", silk: "#edf1e8", muted: "#a3c2b1", pad: "#d6ab3c", hole: "#05130d", chip: "#121715" };
+const DIN = "Bahnschrift,'DIN Alternate','DIN 2014','Barlow Semi Condensed','Roboto Condensed','Arial Narrow',sans-serif";
+const MONO = "'IBM Plex Mono','JetBrains Mono','Cascadia Mono',Consolas,'SF Mono',Menlo,monospace";
+const SANS = "'IBM Plex Sans','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif";
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 export const BANNERS = [
@@ -20,59 +22,64 @@ export const BANNERS = [
   { slug: "maxwell-tech-hub", accent: "#22d3ee", kind: "WEBSITE", title: "maxwellnixon.com", tagline: "Portfolio, 35+ developer tools, live data, and an arcade.", tags: ["Next.js 15", "TypeScript", "Tailwind", "Vercel"] },
 ];
 
+const hole = (x, y, r = 11) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${C.pad}"/><circle cx="${x}" cy="${y}" r="${(r * .58).toFixed(1)}" fill="${C.hole}"/>`;
+
 function banner(b) {
-  const W = 1280, H = 260;
+  const W = 1280, H = 260, cx = 1100, cy = 130, half = 54, n = 6, pitch = 14;
   let tx = 56;
+  // Tags are drawn as silkscreen part outlines.
   const tags = b.tags.map((t) => {
-    const w = t.length * 8.4 + 26, x = tx; tx += w + 10;
-    return `<rect x="${x}" y="188" width="${w.toFixed(0)}" height="30" rx="15" fill="${b.accent}" fill-opacity=".1" stroke="${b.accent}" stroke-opacity=".4"/><text x="${(x + w / 2).toFixed(1)}" y="208" text-anchor="middle" font-family="${MONO}" font-size="13.5" fill="${b.accent}">${esc(t)}</text>`;
+    const w = t.length * 8.2 + 26, x = tx; tx += w + 10;
+    return `<rect x="${x}" y="186" width="${w.toFixed(0)}" height="30" rx="2" fill="none" stroke="${C.silk}" stroke-opacity=".55"/><text x="${(x + w / 2).toFixed(1)}" y="206" text-anchor="middle" font-family="${MONO}" font-size="13.5" fill="${C.silk}">${esc(t)}</text>`;
   }).join("");
-  let grid = "";
-  for (let x = 760; x <= W; x += 40) grid += `<line x1="${x}" y1="0" x2="${x}" y2="${H}"/>`;
-  for (let y = 20; y < H; y += 40) grid += `<line x1="760" y1="${y}" x2="${W}" y2="${y}"/>`;
+  let pins = "", traces = "";
+  for (let i = 0; i < n; i++) {
+    const o = (i - (n - 1) / 2) * pitch, ty = cy + (i - (n - 1) / 2) * 36, d = Math.abs(ty - (cy + o));
+    pins += `<rect x="${cx - half - 12}" y="${cy + o - 3}" width="12" height="6" rx="1"/><rect x="${cx + half}" y="${cy + o - 3}" width="12" height="6" rx="1"/>`;
+    pins += `<rect x="${cx + o - 3}" y="${cy - half - 12}" width="6" height="12" rx="1"/><rect x="${cx + o - 3}" y="${cy + half}" width="6" height="12" rx="1"/>`;
+    traces += `<path d="M${cx - half - 12} ${cy + o}H${cx - half - 30}L${cx - half - 30 - d} ${ty}H860"/><path d="M${cx + half + 12} ${cy + o}H${cx + half + 26}L${cx + half + 26 + d} ${ty}H${W + 10}"/>`;
+    traces += `<path d="M${cx + o} ${cy - half - 12}V-10"/><path d="M${cx + o} ${cy + half + 12}V${H + 10}"/>`;
+  }
+  const vias = Array.from({ length: n }, (_, i) => { const y = cy + (i - (n - 1) / 2) * 36; return `<circle cx="860" cy="${y}" r="4.5" fill="${C.pad}"/><circle cx="860" cy="${y}" r="1.8" fill="${C.hole}"/>`; }).join("");
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img"><title>${esc(b.title)}: ${esc(b.tagline)}</title>
-  <defs>
-    <radialGradient id="g" cx="1" cy="0" r="1"><stop offset="0" stop-color="${b.accent}" stop-opacity=".3"/><stop offset="1" stop-color="${b.accent}" stop-opacity="0"/></radialGradient>
-    <linearGradient id="m" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000"/></linearGradient>
-    <mask id="fade"><rect x="760" width="520" height="${H}" fill="url(#m)"/></mask>
-    <clipPath id="c"><rect width="${W}" height="${H}" rx="20"/></clipPath>
-  </defs>
+  <defs><clipPath id="c"><rect width="${W}" height="${H}" rx="14"/></clipPath></defs>
   <g clip-path="url(#c)">
-    <rect width="${W}" height="${H}" fill="${C.panel}"/>
-    <rect width="${W}" height="${H}" fill="url(#g)"/>
-    <g stroke="${b.accent}" stroke-opacity=".28" mask="url(#fade)">${grid}</g>
-    <circle cx="1120" cy="130" r="64" fill="none" stroke="${b.accent}" stroke-opacity=".5" stroke-width="2" stroke-dasharray="6 10"><animateTransform attributeName="transform" type="rotate" from="0 1120 130" to="360 1120 130" dur="40s" repeatCount="indefinite"/></circle>
-    <circle cx="1120" cy="130" r="34" fill="${b.accent}" fill-opacity=".14" stroke="${b.accent}" stroke-opacity=".7"><animate attributeName="r" values="34;40;34" dur="5s" repeatCount="indefinite"/></circle>
-    <text x="1120" y="141" text-anchor="middle" font-family="${SANS}" font-size="32" font-weight="800" fill="${b.accent}">${esc(b.title[0].toUpperCase())}</text>
+    <rect width="${W}" height="${H}" fill="${C.bg}"/>
+    <g fill="none" stroke="${C.trace}" stroke-width="3" stroke-linejoin="round">${traces}</g>${vias}
+    <g fill="${C.pad}">${pins}</g>
+    <rect x="${cx - half}" y="${cy - half}" width="${half * 2}" height="${half * 2}" rx="4" fill="${C.chip}"/>
+    <circle cx="${cx - half + 13}" cy="${cy - half + 13}" r="4" fill="#2b322f"/>
+    <text x="${cx}" y="${cy + 13}" text-anchor="middle" font-family="${DIN}" font-size="38" font-weight="700" fill="#5f6a65">${esc(b.title[0].toUpperCase())}</text>
+    ${hole(26, 26)}${hole(26, H - 26)}
   </g>
-  <rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="19" fill="none" stroke="${C.line}"/>
-  <rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="19" fill="none" stroke="${b.accent}" stroke-width="2" stroke-linecap="round" pathLength="1000" stroke-dasharray="90 910"><animate attributeName="stroke-dashoffset" from="1000" to="0" dur="9s" repeatCount="indefinite"/></rect>
-  <text x="56" y="62" font-family="${MONO}" font-size="14" letter-spacing="3" fill="${b.accent}">${esc(b.kind)}</text>
-  <text x="56" y="122" font-family="${SANS}" font-size="52" font-weight="800" fill="${C.text}">${esc(b.title)}</text>
-  <text x="56" y="160" font-family="${SANS}" font-size="20" fill="${C.muted}">${esc(b.tagline)}</text>
+  <rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="14" fill="none" stroke="${C.line}"/>
+  <text x="56" y="64" font-family="${MONO}" font-size="13.5" letter-spacing="2.5" fill="${C.pad}">${esc(b.kind)}</text>
+  <text x="54" y="124" font-family="${DIN}" font-size="54" font-weight="700" fill="${C.silk}">${esc(b.title)}</text>
+  <text x="56" y="160" font-family="${SANS}" font-size="19" fill="${C.muted}">${esc(b.tagline)}</text>
   ${tags}</svg>\n`;
 }
 
-const sweep = `<linearGradient id="sw" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${C.cyan}"/><stop offset=".55" stop-color="${C.purple}"/><stop offset="1" stop-color="${C.gold}"/></linearGradient>`;
-const aura = `<radialGradient id="au" cx=".3" cy=".25" r=".9"><stop offset="0" stop-color="#1b1140"/><stop offset=".6" stop-color="#070912"/><stop offset="1" stop-color="${C.bg}"/></radialGradient>`;
-const frame = (inner) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1024" height="1024"><defs>${sweep}${aura}<filter id="gl" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="14"/></filter></defs><rect width="512" height="512" fill="url(#au)"/>${inner}</svg>\n`;
+// Avatars: 512 units drawn at 1024 px. Everything important sits inside the circle GitLab crops to.
+const frame = (inner) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1024" height="1024"><rect width="512" height="512" fill="${C.bg}"/>${inner}</svg>\n`;
 
-// A: bold monogram. Everything important sits inside the circle GitLab crops to.
+// A: a gold "M" pad with a silkscreen ring, like a large fiducial.
 const mPath = "M150 356 V156 H196 L256 262 L316 156 H362 V356 H318 V236 L270 322 H242 L194 236 V356 Z";
-const avatarA = frame(`<circle cx="256" cy="256" r="214" fill="none" stroke="url(#sw)" stroke-width="6" opacity=".9"/><path d="${mPath}" fill="url(#sw)" filter="url(#gl)" opacity=".75"/><path d="${mPath}" fill="url(#sw)"/>`);
+const avatarA = frame(`<circle cx="256" cy="256" r="214" fill="none" stroke="${C.silk}" stroke-width="5" opacity=".75"/><path d="${mPath}" fill="${C.pad}"/>`);
 
-// B: the pixel "M" from the terminal panel.
+// B: the pixel "M" laid out as a grid of square pads.
 const M = ["100000001", "110000011", "101000101", "100101001", "100010001", "100000001", "100000001"];
 const cs = 34, ox = 256 - (9 * cs - 6) / 2, oy = 256 - (7 * cs - 6) / 2;
-const cells = M.map((row, y) => [...row].map((c, x) => `<rect x="${ox + x * cs}" y="${oy + y * cs}" width="${cs - 6}" height="${cs - 6}" rx="6" fill="${c === "1" ? "url(#sw)" : "#161a27"}"/>`).join("")).join("");
-const avatarB = frame(`<circle cx="256" cy="256" r="232" fill="#080a11" stroke="${C.line}" stroke-width="2"/>${cells}`);
+const cells = M.map((row, y) => [...row].map((c, x) => `<rect x="${ox + x * cs}" y="${oy + y * cs}" width="${cs - 6}" height="${cs - 6}" rx="3" fill="${c === "1" ? C.pad : C.trace}"/>`).join("")).join("");
+const avatarB = frame(cells);
 
-// C: monogram over the header's horizon grid.
-let rays = "";
-for (let x = -600; x <= 1112; x += 86) rays += `<line x1="256" y1="330" x2="${x}" y2="512" stroke="${C.purple}" stroke-opacity=".5"/>`;
-for (let i = 1; i <= 6; i++) { const y = 330 + Math.pow(i / 6, 2) * 182; rays += `<line x1="0" x2="512" y1="${y.toFixed(1)}" y2="${y.toFixed(1)}" stroke="${C.cyan}" stroke-opacity="${(0.15 + i * 0.09).toFixed(2)}"/>`; }
-const mSmall = "M166 318 V138 H206 L256 228 L306 138 H346 V318 H308 V210 L268 284 H244 L204 210 V318 Z";
-const avatarC = frame(`${rays}<rect y="328" width="512" height="3" fill="url(#sw)"/><path d="${mSmall}" fill="url(#sw)" filter="url(#gl)" opacity=".8"/><path d="${mSmall}" fill="url(#sw)"/>`);
+// C: a chip seen from above, marked MN, with pin 1 dot.
+let chipPins = "";
+for (let i = 0; i < 8; i++) {
+  const o = 256 - 105 + i * 30;
+  chipPins += `<rect x="${o - 6}" y="104" width="12" height="28" rx="2"/><rect x="${o - 6}" y="380" width="12" height="28" rx="2"/><rect x="104" y="${o - 6}" width="28" height="12" rx="2"/><rect x="380" y="${o - 6}" width="28" height="12" rx="2"/>`;
+}
+const avatarC = frame(`<g fill="${C.pad}">${chipPins}</g><rect x="138" y="138" width="236" height="236" rx="10" fill="${C.chip}"/><circle cx="168" cy="168" r="10" fill="#2b322f"/>
+  <text x="256" y="292" text-anchor="middle" font-family="${DIN}" font-size="104" font-weight="700" fill="${C.silk}">MN</text>`);
 
 const out = process.argv[2];
 if (out) {
