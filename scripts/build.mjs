@@ -144,23 +144,22 @@ function card(c, i) {
   let tx = 32;
   const tags = c.tags.map((t) => {
     const w = t.length * 7.9 + 22, x = tx; tx += w + 8;
-    return `<rect x="${x}" y="391" width="${w.toFixed(0)}" height="26" rx="13" fill="${c.accent}" fill-opacity=".1" stroke="${c.accent}" stroke-opacity=".35"/><text x="${(x + w / 2).toFixed(1)}" y="409" text-anchor="middle" font-family="${MONO}" font-size="12.5" fill="${c.accent}">${esc(t)}</text>`;
+    return `<rect x="${x}" y="391" width="${w.toFixed(0)}" height="26" rx="2" fill="none" stroke="${C.silk}" stroke-opacity=".55"/><text x="${(x + w / 2).toFixed(1)}" y="409" text-anchor="middle" font-family="${MONO}" font-size="12.5" fill="${C.silk}">${esc(t)}</text>`;
   }).join("");
   const capture = SCREENSHOTS[c.slug];
   const artwork = capture ? `<image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="${capture}" width="620" height="248" preserveAspectRatio="${c.slug === "launcher" ? "xMidYMin slice" : "xMidYMid meet"}"/>` : projectArt(c.slug, c.accent);
   const label = capture ? (c.slug === "site" ? "Website capture" : c.slug === "launcher" ? "App screenshot" : "Desktop capture") : "Project illustration";
   return svg(W, H, `
   <title>${esc(c.title)}</title>
-  <defs><clipPath id="art"><rect width="620" height="248" rx="18"/></clipPath><radialGradient id="g" cx="1" cy="0" r="1"><stop offset="0" stop-color="${c.accent}" stop-opacity=".22"/><stop offset="1" stop-color="${c.accent}" stop-opacity="0"/></radialGradient></defs>
+  <defs><clipPath id="art"><rect width="620" height="248" rx="18"/></clipPath></defs>
   <rect width="${W}" height="${H}" rx="18" fill="${C.panel}"/>
-  <rect width="${W}" height="${H}" rx="18" fill="url(#g)"/>
   <g clip-path="url(#art)">${artwork}</g>
   <rect x="418" y="218" width="180" height="23" rx="6" fill="#070c15" fill-opacity=".85"/>
   <text x="588" y="234" text-anchor="end" font-family="${MONO}" font-size="11" fill="#bac9d8">${label}</text>
   <rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="17" fill="none" stroke="${C.line}"/>
-  <text x="32" y="278" font-family="${MONO}" font-size="13" letter-spacing="2" fill="${c.accent}">${esc(c.tags[0])}</text>
+  <text x="32" y="278" font-family="${MONO}" font-size="13" letter-spacing="2" fill="${C.pad}">${esc(c.tags[0])}</text>
   <text x="${W - 32}" y="278" text-anchor="end" font-family="${MONO}" font-size="13" fill="${C.muted}">open ↗</text>
-  <text x="32" y="315" font-family="${SANS}" font-size="29" font-weight="700" fill="${C.text}">${esc(c.title)}</text>
+  <text x="32" y="315" font-family="${DIN}" font-size="31" font-weight="700" fill="${C.text}">${esc(c.title)}</text>
   ${c.lines.map((l, n) => `<text x="32" y="${344 + n * 22}" font-family="${SANS}" font-size="15.5" fill="${C.muted}">${esc(l)}</text>`).join("")}
   ${tags}`);
 }
